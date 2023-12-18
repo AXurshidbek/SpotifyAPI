@@ -4,6 +4,15 @@ from .models import *
 
 class QoshiqSerializer(serializers.ModelSerializer):
     class Meta:
-        meta=Qoshiq
+        model=Qoshiq
         fields='__all__'
 
+class AlbomSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=Albom
+        fields='__all__'
+
+class QoshiqchiSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=Qoshiqchi
+        fields='__all__'

@@ -11,7 +11,7 @@ class Qoshiqchi(models.Model):
 class Albom(models.Model):
     nom=models.CharField(max_length=35)
     sana=models.DateField()
-    rasm=models.FileField()
+    rasm=models.FileField(blank=True, null=True)
     qoshiqchi=models.ForeignKey(Qoshiqchi, on_delete=models.CASCADE, blank=True)
 
     def __str__(self):
@@ -22,7 +22,7 @@ class Qoshiq(models.Model):
     nom=models.CharField(max_length=35)
     janr=models.CharField(max_length=25)
     davomiylik=models.DurationField(blank=True, null=True)
-    fayl=models.FileField(null=True)
+    fayl=models.FileField(blank=True,null=True)
     albom=models.ForeignKey(Albom, on_delete=models.CASCADE)
 
     def __str__(self):
